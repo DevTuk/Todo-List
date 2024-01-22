@@ -28,7 +28,7 @@ export default function Home() {
       <div className="m-5 flex  justify-evenly">
         <input
           ref={inputName}
-          className="rounded-lg p-2"
+          className="m-1 rounded-lg p-1"
           placeholder="New todo"
           type="text"
           value={todo}
@@ -41,20 +41,20 @@ export default function Home() {
           }}
         />
         <button
-          className=" rounded-lg bg-blue-400 p-2 align-top"
+          className="m-1 rounded-lg bg-blue-400 p-2 align-top"
           type="submit"
           onClick={handleAddTodo}
         >
-          Save Todo
+          Save
         </button>
       </div>
       {todos.map((todo, index) => (
         // eslint-disable-next-line react/no-array-index-key
         <div key={index} className="m-2 flex  justify-between">
-          <li className="p-2">{todo}</li>
+          <li className="p-1">{todo}</li>
           <div>
             <button
-              className="ml-2 rounded-lg bg-red-400 p-2"
+              className="ml-2 rounded-lg bg-red-400 p-1"
               type="submit"
               onClick={() => handleDeleteTodo(index)}
             >
